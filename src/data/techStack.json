@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Languages",
+    "items": [
+      { "name": "TypeScript", "level": "core" },
+      { "name": "JavaScript", "level": "core" },
+      { "name": "Python", "level": "proficient" },
+      { "name": "SQL", "level": "proficient" }
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "items": [
+      { "name": "Next.js", "level": "core" },
+      { "name": "React", "level": "core" },
+      { "name": "Node.js", "level": "core" },
+      { "name": "Express", "level": "proficient" },
+      { "name": "Tailwind CSS", "level": "proficient" }
+    ]
+  },
+  {
+    "category": "Databases",
+    "items": [
+      { "name": "PostgreSQL", "level": "proficient" },
+      { "name": "MongoDB", "level": "proficient" },
+      { "name": "Redis", "level": "familiar" }
+    ]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      { "name": "Git", "level": "core" },
+      { "name": "Docker", "level": "proficient" },
+      { "name": "Vercel", "level": "proficient" },
+      { "name": "Prisma", "level": "familiar" }
+    ]
+  }
+]

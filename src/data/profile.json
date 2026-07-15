@@ -1,0 +1,35 @@
+{
+  "name": "Ishaan",
+  "initials": "IS",
+  "role": "Full-stack developer",
+  "location": "India",
+  "bio": "Full-stack developer building fast, interactive web experiences. I care about performance, type-safe code, and the small details that make an interface feel alive.",
+  "email": "hello@example.com",
+  "resumeUrl": "/assets/resume.pdf",
+  "socials": [
+    {
+      "platform": "github",
+      "label": "GitHub",
+      "url": "https://github.com/ishaan",
+      "handle": "@ishaan"
+    },
+    {
+      "platform": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/ishaan",
+      "handle": "in/ishaan"
+    },
+    {
+      "platform": "x",
+      "label": "X",
+      "url": "https://x.com/ishaan",
+      "handle": "@ishaan"
+    },
+    {
+      "platform": "email",
+      "label": "Email",
+      "url": "mailto:hello@example.com",
+      "handle": "hello@example.com"
+    }
+  ]
+}
