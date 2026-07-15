@@ -1,0 +1,27 @@
+[
+  {
+    "id": "hackx-2024",
+    "title": "1st place — Realtime track",
+    "event": "HackX 2024",
+    "placement": "Winner",
+    "date": "2024-03",
+    "description": "Built a realtime collaboration tool in 36 hours; won the realtime track against 80+ teams.",
+    "url": "https://devpost.com/software/example"
+  },
+  {
+    "id": "opensource-summit-2023",
+    "title": "Finalist — Developer tools",
+    "event": "Open Source Summit Hacks 2023",
+    "placement": "Finalist",
+    "date": "2023-10",
+    "description": "Shipped a CLI that scaffolds type-safe API clients from an OpenAPI spec."
+  },
+  {
+    "id": "campus-hack-2023",
+    "title": "Best use of data",
+    "event": "Campus Hack 2023",
+    "placement": "Winner",
+    "date": "2023-02",
+    "description": "A campus analytics dashboard surfacing live facility usage from IoT sensors."
+  }
+]
