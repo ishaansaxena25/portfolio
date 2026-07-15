@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1stop",
+    "slug": "1stop",
+    "title": "1Stop",
+    "tagline": "One-stop campus services platform",
+    "description": "A single portal that unifies campus services — bookings, tickets, and announcements — behind one type-safe Next.js app with server-rendered pages and a Postgres-backed API.",
+    "tech": ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    "role": "Solo",
+    "year": 2024,
+    "repoUrl": "https://github.com/ishaan/1stop",
+    "liveUrl": "https://1stop.example.com",
+    "featured": true,
+    "bubble": { "radius": 74, "seedX": 0.22, "seedY": 0.3 }
+  },
+  {
+    "id": "blogbubble",
+    "slug": "blogbubble",
+    "title": "BlogBubble",
+    "tagline": "Minimal markdown blogging with realtime comments",
+    "description": "A lightweight blogging platform: write in markdown, publish instantly, and get realtime comment threads over WebSockets. Built on React and a Node/Express backend with MongoDB.",
+    "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "role": "Solo",
+    "year": 2023,
+    "repoUrl": "https://github.com/ishaan/blogbubble",
+    "liveUrl": "https://blogbubble.example.com",
+    "featured": true,
+    "bubble": { "radius": 64, "seedX": 0.7, "seedY": 0.35 }
+  },
+  {
+    "id": "ecommerce-api",
+    "slug": "ecommerce-api",
+    "title": "E-commerce API",
+    "tagline": "Scalable REST API for storefronts",
+    "description": "A production-shaped REST API for e-commerce: catalog, cart, orders, and auth, with Redis caching and Docker-based deploys. Rate-limited, tested, and documented.",
+    "tech": ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"],
+    "role": "Backend",
+    "year": 2023,
+    "repoUrl": "https://github.com/ishaan/ecommerce-api",
+    "bubble": { "radius": 60, "seedX": 0.5, "seedY": 0.68 }
+  }
+]
