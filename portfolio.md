@@ -1,3 +1,7 @@
+> ARCHIVED — abandoned alternate vision (Hades 2D platformer). Not implemented. The active project is the dual-mode ASCII portfolio; see README.md.
+
+---
+
 > I am building an interactive portfolio website called 'Portfolio'. It is a 2D platformer-style web experience inspired by the game Hades.
 >
 > I have provided four documents in the root directory: README.md (Architecture), PLAN.md (Milestones), IMPLEMENTATION.md (Styling/Logic Rules), and SKILLS.md (Technical Patterns).
