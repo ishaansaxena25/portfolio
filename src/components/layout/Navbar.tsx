@@ -23,12 +23,12 @@ export default function Navbar({ isInteractive = false, onToggle }: NavbarProps)
           {profile.name}
         </a>
         <div className="flex items-center gap-3 text-small text-fg-muted">
-          <span id="mode-label">{isInteractive ? "Interactive" : "Static"}</span>
+          <span aria-hidden>{isInteractive ? "Interactive" : "Static"}</span>
           <button
             type="button"
             role="switch"
             aria-checked={isInteractive}
-            aria-labelledby="mode-label"
+            aria-label="Interactive mode"
             onClick={() => onToggle?.(!isInteractive)}
             className="relative h-6 w-11 rounded-[4px] border border-border bg-bg-elevated"
           >

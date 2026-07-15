@@ -97,9 +97,11 @@ The scramble effect is the ONE global heading primitive and works in BOTH modes.
 
 ## 6. Mode toggle behavior & rules
 
-- **Single source of truth:** `isInteractive` boolean lives ONLY in `/src/app/page.tsx`:
+- **Single source of truth:** the `isInteractive` boolean lives in the client shell
+  `/src/components/layout/InteractiveShell.tsx` (rendered by the Server Component `page.tsx`):
   `const [isInteractive, setIsInteractive] = React.useState<boolean>(false);`
-  Default `false` = Static Mode.
+  Default `false` = Static Mode. `page.tsx` stays a Server Component and passes the
+  static/shared server subtrees into the shell as slot props, so they remain server-rendered.
 - **Only entry point:** the physical toggle switch in `Navbar.tsx` is the ONLY way to change mode. `Navbar` is a pure controlled component: it receives `isInteractive` + `setIsInteractive` as props, reflects state, and calls the setter. It holds no mode state of its own.
 - **Static tree (`isInteractive === false`):** `StaticHero` + `Projects` (static card grid).
 - **Interactive tree (`isInteractive === true`):** `CursorTrail` + `InteractiveHero` (renders `AsciiCanvas`) + `FloatingProjects` (bubbles). All three are dynamic-imported with `ssr:false`.
@@ -112,7 +114,7 @@ The scramble effect is the ONE global heading primitive and works in BOTH modes.
 
 ## 7. React state rules
 
-- **Single boolean, `useState`, in `page.tsx`.** No exceptions.
+- **Single boolean, `useState`, in the client shell `InteractiveShell` (rendered by `page.tsx`).** No exceptions.
 - **NEVER use Zustand or any external state library.** NEVER use GSAP.
 - **Context only if genuinely required:** if deep prop drilling of the toggle ever appears, a minimal `InteractiveModeContext` is the sanctioned escape hatch — but plain props (`isInteractive`, `setIsInteractive`) passed to `Navbar` are the default and strongly preferred.
 - **No React state on high-frequency events.** Mouse position for all physics/trail code lives in a `ref` updated by a PASSIVE `mousemove` listener. NEVER call `setState` on `mousemove` or per RAF frame.
@@ -124,11 +126,13 @@ The scramble effect is the ONE global heading primitive and works in BOTH modes.
 
 - **`"use client"` required** on: `AsciiCanvas`, `InteractiveHero`, `CursorTrail`, `FloatingProjects`, and `ScrambleText`.
 - **Default-export** each interactive component so it can be dynamic-imported.
-- **ALWAYS import via `next/dynamic` with `{ ssr: false }`**, at module scope in `page.tsx`:
+- **ALWAYS import via `next/dynamic` with `{ ssr: false }`**, at module scope in the client shell
+  `/src/components/layout/InteractiveShell.tsx` (NOT in `page.tsx` — it is a Server Component and
+  `dynamic({ ssr:false })` cannot run there):
   ```ts
-  const DynamicInteractiveHero = dynamic(() => import('@/components/hero/InteractiveHero'), { ssr: false });
-  const CursorTrail = dynamic(() => import('@/components/interactive/CursorTrail'), { ssr: false });
-  const FloatingProjects = dynamic(() => import('@/components/interactive/FloatingProjects'), { ssr: false });
+  const DynamicInteractiveHero = dynamic(() => import('@/components/hero/InteractiveHero'), { ssr: false, loading: () => null });
+  const CursorTrail = dynamic(() => import('@/components/interactive/CursorTrail'), { ssr: false, loading: () => null });
+  const FloatingProjects = dynamic(() => import('@/components/interactive/FloatingProjects'), { ssr: false, loading: () => null });
   ```
 - **Reference them ONLY inside the `isInteractive === true` branch**, so their bundles are code-split and fetched on first toggle-on. Static Mode's first paint ships ZERO canvas/physics/trail JS.
 - **NEVER render an interactive component on the server.** They must never appear in the SSR/disabled-JS output. Verify via view-source and network chunk inspection: no interactive chunk loads until the toggle flips.
