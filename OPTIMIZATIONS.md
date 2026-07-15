@@ -98,3 +98,15 @@ Confirm each rule group before tagging `v1.0`:
 7. **FloatingProjects** — Inspect the DOM: exactly one node per `projects.json` entry exists and the count never grows on mousemove. Confirm positioning uses `translate3d` (no `top`/`left`), that repulsion uses squared distance (no `Math.sqrt`, code audit), and that the §3 IntersectionObserver pause freezes/restarts its RAF via `/src/lib/useRafLoop.ts`.
 8. **Cleanup / no leaks** — Toggle Interactive on/off repeatedly (~10x); confirm listener count and active RAF count return to baseline and the JS heap shows no monotonic growth (Chrome Memory timeline). Confirm toggling to Static and scrolling offscreen both stop all RAFs (zero idle animation CPU).
 9. **Static Mode budget** — Record a Lighthouse run; Performance must be `>= 95` (SEO/Accessibility likewise per Phase 2 baseline). `next build` and `tsc --noEmit` pass with 0 TypeScript errors.
+
+### Results — v1.0 (recorded 2026-07-16)
+
+Verified against the production build (`bun run build` + `next start`):
+
+- **Lighthouse, Static Mode:** Performance **98**, Accessibility **100**, Best Practices **100**, SEO **100** (all ≥ 95). FCP 0.8s, LCP 1.8s, TBT 50ms, CLS 0.
+- **Compliance audit — all 9 rule groups PASS** (adversarial, file:line evidence): non-whitespace-only parsing + stride sampling (`ascii.txt` → 2,616 points, in band); dynamic `ssr:false` in the client shell, referenced only in the interactive branch, `page.tsx` stays a Server Component; DPR capped at 1.5 with `setTransform` once per resize; zero `Math.sqrt`/trig in any per-frame loop, plain for-loops, hoisted constants, single `fillStyle`, `fillRect` squares, no glow; fixed 15-node trail + one bubble per project, all `translate3d`; full teardown (RAF + listeners-by-ref + `observer.disconnect`) on unmount/toggle-off.
+- **Dynamic import & SSR (DevTools Network):** on initial `/` load `/data/ascii.txt` is **not** requested (interactive tree unmounted); it loads (GET 200) only on first toggle-on.
+- **Toggle cycle:** static ↔ interactive both directions with 0 app console errors; the interactive tree unmounts cleanly on toggle-off (canvas removed).
+- **IntersectionObserver pause:** reviewed — cancels the RAF offscreen, restarts exactly one loop on re-entry (guarded against double-start), disconnects on unmount; `CursorTrail` (no target) keeps running while interactive.
+
+Two low-severity, non-triggered robustness notes on `useRafLoop` were accepted as-is: the container refs are stable and populated before the effect runs, so neither the stale-node nor the null-at-effect case can occur in this codebase.
