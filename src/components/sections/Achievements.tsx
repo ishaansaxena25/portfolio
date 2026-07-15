@@ -34,9 +34,10 @@ export default function Achievements() {
                   href={item.url}
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label={`View the writeup for ${item.title}`}
                   className="mt-2 inline-block text-small text-accent hover:text-accent-dim"
                 >
-                  Read more
+                  View writeup
                 </a>
               ) : null}
             </div>
