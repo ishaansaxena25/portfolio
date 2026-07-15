@@ -39,6 +39,7 @@ export default function Projects() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label={`${project.title} — live site`}
                   className="text-accent hover:text-accent-dim"
                 >
                   Live
@@ -49,6 +50,7 @@ export default function Projects() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label={`${project.title} — source code`}
                   className="text-accent hover:text-accent-dim"
                 >
                   Code

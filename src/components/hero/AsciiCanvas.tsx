@@ -182,7 +182,8 @@ export default function AsciiCanvas({ points, cols, rows }: AsciiCanvasProps) {
     }
   }, []);
 
-  useRafLoop(frame, !reducedMotion);
+  // Gate the loop on visibility: idle when the canvas is scrolled off-screen.
+  useRafLoop(frame, !reducedMotion, containerRef);
 
   // Setup: context, initial map, resize observation, mouse listeners.
   useEffect(() => {

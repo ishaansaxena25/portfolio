@@ -148,7 +148,8 @@ export default function FloatingProjects() {
     }
   }, [radii]);
 
-  useRafLoop(onFrame, !reducedMotion);
+  // Gate the loop on visibility: idle when the bubble field is scrolled off-screen.
+  useRafLoop(onFrame, !reducedMotion, containerRef);
 
   // ---- Setup: measure, seed, listeners (layout effect avoids a flash) -----
   useLayoutEffect(() => {
