@@ -16,11 +16,11 @@ The Interactive Mode canvas and animations must be flawlessly optimized. Static 
 ## 2. Dynamic Import & SSR Disabling
 
 - `InteractiveHero` (which renders `AsciiCanvas`), `CursorTrail`, and `FloatingProjects` must NEVER render or hydrate on the server.
-- All interactive components are default-exported and imported at module scope in `page.tsx` via `next/dynamic` with `{ ssr: false }`:
+- All interactive components are default-exported and imported at module scope in the client shell `src/components/layout/InteractiveShell.tsx` via `next/dynamic` with `{ ssr: false, loading: () => null }`. (`dynamic(..., { ssr: false })` cannot run in a Server Component, so it lives in the `"use client"` shell — NOT in `page.tsx`, which stays a Server Component and passes the static/shared server subtrees to the shell as slot props.)
   ```ts
-  const DynamicInteractiveHero = dynamic(() => import('@/components/hero/InteractiveHero'), { ssr: false });
-  const CursorTrail = dynamic(() => import('@/components/interactive/CursorTrail'), { ssr: false });
-  const FloatingProjects = dynamic(() => import('@/components/interactive/FloatingProjects'), { ssr: false });
+  const DynamicInteractiveHero = dynamic(() => import('@/components/hero/InteractiveHero'), { ssr: false, loading: () => null });
+  const CursorTrail = dynamic(() => import('@/components/interactive/CursorTrail'), { ssr: false, loading: () => null });
+  const FloatingProjects = dynamic(() => import('@/components/interactive/FloatingProjects'), { ssr: false, loading: () => null });
   ```
 - Reference the dynamic versions ONLY inside the `isInteractive === true` branch so the bundles are code-split and fetched on first toggle-on. Static Mode's first paint ships none of this JS.
 
