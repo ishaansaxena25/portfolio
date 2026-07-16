@@ -1,6 +1,9 @@
 # Claude context files (never commit)
 .claude/
 
+docs/
+old_docs/
+
 # Dependencies
 node_modules/
 .pnp
