@@ -3,7 +3,9 @@ import ScrambleText from "@/components/ui/ScrambleText";
 
 /** Achievements timeline, sorted by date descending. Shared section — both modes. */
 export default function Achievements() {
-  const sorted = [...achievements].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = [...achievements].sort((a, b) =>
+    (b.date ?? "").localeCompare(a.date ?? ""),
+  );
 
   return (
     <section
@@ -21,13 +23,19 @@ export default function Achievements() {
               {item.date}
             </span>
             <div>
-              <ScrambleText as="h3" text={item.title} className="text-h3 text-fg" />
+              <ScrambleText
+                as="h3"
+                text={item.title}
+                className="text-h3 text-fg"
+              />
               <p className="mt-1 text-small text-fg-muted">
                 {item.event}
                 {item.placement ? ` · ${item.placement}` : ""}
               </p>
               {item.description ? (
-                <p className="mt-2 text-body text-fg-muted">{item.description}</p>
+                <p className="mt-2 text-body text-fg-muted">
+                  {item.description}
+                </p>
               ) : null}
               {item.url ? (
                 <a
