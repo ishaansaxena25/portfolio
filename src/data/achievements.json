@@ -1,27 +1,33 @@
 [
   {
-    "id": "hackx-2024",
-    "title": "1st place — Realtime track",
-    "event": "HackX 2024",
-    "placement": "Winner",
-    "date": "2024-03",
-    "description": "Built a realtime collaboration tool in 36 hours; won the realtime track against 80+ teams.",
-    "url": "https://devpost.com/software/example"
+    "id": "aventus-3",
+    "title": "Top 10 Finalist",
+    "event": "Aventus 3.0 Hackathon",
+    "placement": "Top 10 Finalist",
+    "description": "Finished in the top 10 out of 600+ submissions."
   },
   {
-    "id": "opensource-summit-2023",
-    "title": "Finalist — Developer tools",
-    "event": "Open Source Summit Hacks 2023",
-    "placement": "Finalist",
-    "date": "2023-10",
-    "description": "Shipped a CLI that scaffolds type-safe API clients from an OpenAPI spec."
+    "id": "hack-o-rama",
+    "title": "Participant",
+    "event": "HACK-O-RAMA, DSCE",
+    "placement": "Participant"
   },
   {
-    "id": "campus-hack-2023",
-    "title": "Best use of data",
-    "event": "Campus Hack 2023",
-    "placement": "Winner",
-    "date": "2023-02",
-    "description": "A campus analytics dashboard surfacing live facility usage from IoT sensors."
+    "id": "hackmanv7",
+    "title": "Participant",
+    "event": "HACKMAN v7, DSCE",
+    "placement": "Participant"
+  },
+  {
+    "id": "hackbangalore-2024",
+    "title": "Participant",
+    "event": "HackBangalore 2024",
+    "placement": "Participant"
+  },
+  {
+    "id": "hack-nocturne-2024",
+    "title": "Participant",
+    "event": "Hack-Nocturne 2024",
+    "placement": "Participant"
   }
 ]

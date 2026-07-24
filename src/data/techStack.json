@@ -2,37 +2,97 @@
   {
     "category": "Languages",
     "items": [
-      { "name": "TypeScript", "level": "core" },
-      { "name": "JavaScript", "level": "core" },
-      { "name": "Python", "level": "proficient" },
-      { "name": "SQL", "level": "proficient" }
+      {
+        "name": "C++",
+        "level": "core"
+      },
+      {
+        "name": "TypeScript",
+        "level": "core"
+      },
+      {
+        "name": "JavaScript",
+        "level": "core"
+      },
+      {
+        "name": "SQL",
+        "level": "proficient"
+      }
     ]
   },
   {
-    "category": "Frameworks",
+    "category": "Backend / Frameworks",
     "items": [
-      { "name": "Next.js", "level": "core" },
-      { "name": "React", "level": "core" },
-      { "name": "Node.js", "level": "core" },
-      { "name": "Express", "level": "proficient" },
-      { "name": "Tailwind CSS", "level": "proficient" }
+      {
+        "name": "Node.js",
+        "level": "core"
+      },
+      {
+        "name": "Express.js",
+        "level": "core"
+      },
+      {
+        "name": "REST API Design",
+        "level": "core"
+      },
+      {
+        "name": "React",
+        "level": "proficient"
+      },
+      {
+        "name": "React Native",
+        "level": "proficient"
+      }
     ]
   },
   {
     "category": "Databases",
     "items": [
-      { "name": "PostgreSQL", "level": "proficient" },
-      { "name": "MongoDB", "level": "proficient" },
-      { "name": "Redis", "level": "familiar" }
+      {
+        "name": "PostgreSQL",
+        "level": "core"
+      },
+      {
+        "name": "MongoDB",
+        "level": "core"
+      },
+      {
+        "name": "Redis",
+        "level": "proficient"
+      },
+      {
+        "name": "Prisma",
+        "level": "proficient"
+      }
     ]
   },
   {
     "category": "Tools",
     "items": [
-      { "name": "Git", "level": "core" },
-      { "name": "Docker", "level": "proficient" },
-      { "name": "Vercel", "level": "proficient" },
-      { "name": "Prisma", "level": "familiar" }
+      {
+        "name": "Docker",
+        "level": "core"
+      },
+      {
+        "name": "Git",
+        "level": "core"
+      },
+      {
+        "name": "GitHub Actions",
+        "level": "proficient"
+      },
+      {
+        "name": "JWT",
+        "level": "proficient"
+      },
+      {
+        "name": "Postman",
+        "level": "proficient"
+      },
+      {
+        "name": "Firebase",
+        "level": "familiar"
+      }
     ]
   }
 ]

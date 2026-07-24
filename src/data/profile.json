@@ -1,35 +1,30 @@
 {
-  "name": "Ishaan",
+  "name": "Ishaan Saxena",
   "initials": "IS",
-  "role": "Full-stack developer",
-  "location": "India",
-  "bio": "Full-stack developer building fast, interactive web experiences. I care about performance, type-safe code, and the small details that make an interface feel alive.",
-  "email": "hello@example.com",
-  "resumeUrl": "/assets/resume.pdf",
+  "role": "Backend Developer",
+  "location": "Bangalore, Karnataka, India",
+  "bio": "Backend-focused software engineer specializing in scalable APIs, geospatial systems, AI-powered automation, and cloud-native applications. Experienced with Node.js, TypeScript, PostgreSQL, MongoDB, Redis, Docker, and modern backend architecture.",
+  "email": "saxenaishaan2004@gmail.com",
+  "phone": "+91-7490004027",
+  "resumeUrl": "/assets/resume_Ishaan_Saxena.pdf",
   "socials": [
     {
       "platform": "github",
       "label": "GitHub",
-      "url": "https://github.com/ishaan",
-      "handle": "@ishaan"
+      "url": "https://github.com/ishaansaxena25",
+      "handle": "@ishaansaxena25"
     },
     {
       "platform": "linkedin",
       "label": "LinkedIn",
-      "url": "https://linkedin.com/in/ishaan",
-      "handle": "in/ishaan"
-    },
-    {
-      "platform": "x",
-      "label": "X",
-      "url": "https://x.com/ishaan",
-      "handle": "@ishaan"
+      "url": "https://linkedin.com/in/ishaansaxena04",
+      "handle": "in/ishaansaxena04"
     },
     {
       "platform": "email",
       "label": "Email",
-      "url": "mailto:hello@example.com",
-      "handle": "hello@example.com"
+      "url": "mailto:saxenaishaan2004@gmail.com",
+      "handle": "saxenaishaan2004@gmail.com"
     }
   ]
 }

@@ -3,40 +3,83 @@
     "id": "1stop",
     "slug": "1stop",
     "title": "1Stop",
-    "tagline": "One-stop campus services platform",
-    "description": "A single portal that unifies campus services — bookings, tickets, and announcements — behind one type-safe Next.js app with server-rendered pages and a Postgres-backed API.",
-    "tech": ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    "tagline": "AI-powered smart public transport platform",
+    "description": "Voice-enabled transit assistant using n8n, GPT-4.1-mini, Gemini fallback, MongoDB geospatial indexing, Redis caching, Docker deployment, and rate-limited backend APIs.",
+    "tech": [
+      "TypeScript",
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Redis",
+      "n8n",
+      "OpenAI",
+      "Gemini"
+    ],
     "role": "Solo",
-    "year": 2024,
-    "repoUrl": "https://github.com/ishaan/1stop",
-    "liveUrl": "https://1stop.example.com",
-    "featured": true,
-    "bubble": { "radius": 74, "seedX": 0.22, "seedY": 0.3 }
+    "featured": true
+  },
+  {
+    "id": "texttailor",
+    "slug": "texttailor",
+    "title": "TeXTailor",
+    "tagline": "Local-first AI resume tailoring CLI",
+    "description": "Automates LaTeX resume tailoring using AST analysis, Obsidian integration, Vercel AI SDK, Gemini, SQLite, and Tectonic.",
+    "tech": [
+      "Node.js",
+      "TypeScript",
+      "WebAssembly",
+      "Vercel AI SDK",
+      "Gemini",
+      "SQLite"
+    ],
+    "role": "Solo",
+    "featured": true
   },
   {
     "id": "blogbubble",
     "slug": "blogbubble",
     "title": "BlogBubble",
-    "tagline": "Minimal markdown blogging with realtime comments",
-    "description": "A lightweight blogging platform: write in markdown, publish instantly, and get realtime comment threads over WebSockets. Built on React and a Node/Express backend with MongoDB.",
-    "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "tagline": "Full-stack publishing platform",
+    "description": "React + Node.js blogging platform with Editor.js, Cloudflare R2 uploads, Redis caching, Docker, and Nginx deployment.",
+    "tech": [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Nginx"
+    ],
     "role": "Solo",
-    "year": 2023,
-    "repoUrl": "https://github.com/ishaan/blogbubble",
-    "liveUrl": "https://blogbubble.example.com",
-    "featured": true,
-    "bubble": { "radius": 64, "seedX": 0.7, "seedY": 0.35 }
+    "featured": true
   },
   {
     "id": "ecommerce-api",
     "slug": "ecommerce-api",
     "title": "E-commerce API",
-    "tagline": "Scalable REST API for storefronts",
-    "description": "A production-shaped REST API for e-commerce: catalog, cart, orders, and auth, with Redis caching and Docker-based deploys. Rate-limited, tested, and documented.",
-    "tech": ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"],
-    "role": "Backend",
-    "year": 2023,
-    "repoUrl": "https://github.com/ishaan/ecommerce-api",
-    "bubble": { "radius": 60, "seedX": 0.5, "seedY": 0.68 }
+    "tagline": "RESTful e-commerce backend",
+    "description": "TypeScript backend with JWT authentication, RBAC, analytics endpoints, and MongoDB.",
+    "tech": [
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT"
+    ],
+    "role": "Backend"
+  },
+  {
+    "id": "paginated-product-api",
+    "slug": "paginated-product-api",
+    "title": "Paginated Product API",
+    "tagline": "Cursor-based pagination at scale",
+    "description": "PostgreSQL API implementing efficient cursor pagination over 200K+ rows.",
+    "tech": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "role": "Backend"
   }
 ]
